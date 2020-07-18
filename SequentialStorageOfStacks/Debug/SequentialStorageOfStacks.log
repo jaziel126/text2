@@ -1,0 +1,5 @@
+﻿  源.cpp
+C:\Users\lenovo\Desktop\data-stucture\StackAndQueue\SequentialStorageOfStacks\源.cpp(9,1): warning C4005: “OVERFLOW”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_math.h(967): message : 参见“OVERFLOW”的前一个定义
+MSVCRTD.lib(exe_main.obj) : error LNK2019: 无法解析的外部符号 _main，函数 "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ) 中引用了该符号
+C:\Users\lenovo\Desktop\data-stucture\StackAndQueue\SequentialStorageOfStacks\Debug\SequentialStorageOfStacks.exe : fatal error LNK1120: 1 个无法解析的外部命令
