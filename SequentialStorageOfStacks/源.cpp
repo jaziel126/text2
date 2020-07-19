@@ -23,6 +23,8 @@ Status InitStack(SqStack& S);/*构建空栈*/
 Status Push(SqStack &S);/*元素入栈*/
 Status Pop(SqStack& S);/*元素出栈*/
 Status DestroyStack(SqStack& S);/*销毁栈*/
+Status ClearStack(SqStack& S);/*清空栈*/
+Status LengthStack(SqStack& S);/*返回栈的长度*/
 
 /*算法实现*/
 Status InitStack(SqStack& S) {
@@ -32,18 +34,49 @@ Status InitStack(SqStack& S) {
 	return OK;
 }
 Status Push(SqStack& S) {
-	if (S.top - S.base >= S.stacksize) {/*栈满，重新分配空间*/
-		S.base = (SElemType*)realloc(S.base, (S.stacksize + STACKINCREMENT) * sizeof(SElemType));
-		if (!S.base) exit(OVERFLOW);
-		S.top = S.base + S.stacksize;
-		S.stacksize += STACKINCREMENT;
-	}
 	int n;
-	cout << "入栈元素个数：";
-	cin >> n;
+	cout<< "入栈元素个数";
+	cin>> n;
 	for (int i = 0;i < n;i++) {
-		cin >> *S.top;
+		cin>> *S.top;
 		S.top++;
 	}
 	return OK;
+}
+Status Pop(SqStack& S){
+	int n;
+	cout << "出栈元素个数：";
+	cin >> n;
+	for (int i = 0;i < n;i++) {
+		S.top--;/*先下移top指针*/
+		cout<< *S.top;
+	}
+	return OK;
+}
+Status DestroyStack(SqStack& S) {
+	int len = S.stacksize;
+	for (int i = 0;i < len;i++) {
+		free(S.base);
+		S.base++;
+	}
+	S.base = S.top = NULL;
+	S.stacksize = 0;
+	return OK;
+}
+Status ClearStack(SqStack& S) {
+	S.base = S.top;
+	return OK;
+}
+Status LengthStack(SqStack& S) {
+	
+	return (S.top-S.base);
+}
+
+int main() {
+	SqStack S;
+	InitStack(S);
+	Push(S);
+	int a = LengthStack(S);
+	cout << a;
+	Pop(S);
 }

@@ -1,0 +1,2 @@
+C:\Users\lenovo\Desktop\data-stucture\StackAndQueue\SequentialStorageOfStacks\Debug\SequentialStorageOfStacks.exe
+C:\Users\lenovo\Desktop\data-stucture\StackAndQueue\SequentialStorageOfStacks\Debug\SequentialStorageOfStacks.pdb
