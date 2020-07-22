@@ -1,0 +1,2 @@
+C:\Users\lenovo\Desktop\data-stucture\栈的应用\链式队列\Debug\链式队列.exe
+C:\Users\lenovo\Desktop\data-stucture\栈的应用\链式队列\Debug\链式队列.pdb

@@ -1,0 +1,5 @@
+﻿  源.cpp
+C:\Users\lenovo\Desktop\data-stucture\栈的应用\链式队列\源.cpp(8,1): warning C4005: “OVERFLOW”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_math.h(967): message : 参见“OVERFLOW”的前一个定义
+C:\Users\lenovo\Desktop\data-stucture\栈的应用\链式队列\源.cpp(26): warning C4715: “InitQueue”: 不是所有的控件路径都返回值
+  链式队列.vcxproj -> C:\Users\lenovo\Desktop\data-stucture\栈的应用\链式队列\Debug\链式队列.exe
