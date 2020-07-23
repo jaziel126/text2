@@ -1,0 +1,5 @@
+﻿  源.cpp
+C:\Users\lenovo\Desktop\data-stucture\栈的应用\循环队列\源.cpp(8,1): warning C4005: “ERROR”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\wingdi.h(118): message : 参见“ERROR”的前一个定义
+C:\Users\lenovo\Desktop\data-stucture\栈的应用\循环队列\源.cpp(50,13): warning C4101: “a”: 未引用的局部变量
+  循环队列.vcxproj -> C:\Users\lenovo\Desktop\data-stucture\栈的应用\循环队列\Debug\循环队列.exe
