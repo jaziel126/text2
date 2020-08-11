@@ -1,0 +1,2 @@
+C:\Users\lenovo\Desktop\data-stucture\栈的应用\串的模式匹配算法\Debug\串的模式匹配算法.exe
+C:\Users\lenovo\Desktop\data-stucture\栈的应用\串的模式匹配算法\Debug\串的模式匹配算法.pdb
