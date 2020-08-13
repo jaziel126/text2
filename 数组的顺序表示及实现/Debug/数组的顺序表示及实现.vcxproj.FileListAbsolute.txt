@@ -1,0 +1,2 @@
+C:\Users\lenovo\Desktop\data-stucture\栈的应用\数组的顺序表示及实现\Debug\数组的顺序表示及实现.exe
+C:\Users\lenovo\Desktop\data-stucture\栈的应用\数组的顺序表示及实现\Debug\数组的顺序表示及实现.pdb
