@@ -1,0 +1,5 @@
+﻿  数组表示法.cpp
+C:\Users\lenovo\Desktop\data-stucture\栈的应用\图的创建及遍历\数组表示法.cpp(6,1): warning C4005: “INFINITY”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_math.h(90): message : 参见“INFINITY”的前一个定义
+C:\Users\lenovo\Desktop\data-stucture\栈的应用\图的创建及遍历\数组表示法.cpp(61): warning C4715: “QueueEmpty”: 不是所有的控件路径都返回值
+  图的创建及遍历.vcxproj -> C:\Users\lenovo\Desktop\data-stucture\栈的应用\图的创建及遍历\Debug\图的创建及遍历.exe
