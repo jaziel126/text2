@@ -1,0 +1,103 @@
+//顺序存储：用两个指针，一个指向存储结构体，另外一个指向存储数组；
+#include<stdio.h>
+#include<iostream>
+#include<stdlib.h>
+using namespace std;
+
+typedef int ElemType;
+typedef int Status;
+#define OVERFLOW -1
+#define OK 1
+#define ERROR 0
+#define List_Init_Size 100//存储空间初始分配量
+#define ListIncretment 10//存储空间分配增量
+
+typedef struct{
+	ElemType *elem;//存储基地址 
+	int length;//当前表长
+	int listsize;//当前的存储容量（以sizeof（ElemType）为单位） 
+}SqList;
+//初始化顺序表
+Status InitList_Sq(SqList &L){
+	L.elem=(ElemType*)malloc(List_Init_Size*sizeof(ElemType));//分配空间 
+    if(!L.elem) exit(0);
+    L.length=0;
+    L.listsize=List_Init_Size;
+    return OK;
+}
+//顺序表数据输入
+Status CreatList_Sq(SqList &L){
+	int a,i;
+	cout<<"确定输入元素个数：";
+	cin>>a;
+	cout<<"请输入数据："; 
+	for (i=0;i<a;i++){
+		cin>>L.elem[i];
+	} 
+	L.length=a;
+	return OK;
+} 
+//顺序表插入
+Status ListInsert_Sq(SqList &L,int i,ElemType e){
+	if (i<1||i>L.length+1) return ERROR;
+	if(L.length>=L.listsize){
+		ElemType *newbase;
+		newbase=(ElemType*)realloc(L.elem,(L.listsize+ListIncretment)*sizeof(ElemType));
+		if(!newbase) return(OVERFLOW);
+		L.elem=newbase;L.listsize+=ListIncretment;
+	}
+	int j;
+	for (j=L.length-1;j>=i;--j){
+		L.elem[j+1]=L.elem[j];
+	}
+	L.elem[i]=e;
+	++L.length;
+	return OK;
+} 
+//顺序表删除
+Status DeleteList_Sq(SqList &L,int i){
+	if(i<0||i>L.length) return ERROR;
+	int j;
+	for(j=i-1;j<L.length-1;j++){
+		L.elem[j]=L.elem[j+1];
+	}
+	--L.length;
+	return OK;
+}
+//顺序表遍历
+Status PrintList(SqList &L){
+	int i;
+	for (i=0;i<L.length;i++){
+		cout<<L.elem[i];
+	}
+	return OK;
+}
+//顺序表按内容查找
+Status LocalList_Sq(SqList &L,ElemType e){
+	int i;
+	for (i=0;i<L.length;i++)
+		if(L.elem[i]==e)
+			return i+1;
+	return OK;
+} 
+int main(){
+	SqList L;
+	InitList_Sq(L);
+	CreatList_Sq(L);
+	int i;
+	ElemType e;
+	cout<<"插入位置：";cin>>i;
+	cout<<"插入数据：";cin>>e;
+	ListInsert_Sq(L,i,e);
+	PrintList(L);cout<<endl;
+	int a;
+	cout<<"删除位置：";cin>>a;
+	DeleteList_Sq(L,a); 
+	PrintList(L);cout<<endl;
+	int c;ElemType b;
+	cout<<"查找内容：";cin>>b;
+	c=LocalList_Sq(L,b);
+	cout<<"所在位序："; 
+	cout<<c; 
+	return OK;
+}
